@@ -1,0 +1,28 @@
+{
+  "name": "cruce-challenge",
+  "version": "1.0.0",
+  "description": "El desafío consta de crear un servidor web utilizando Python y Django o Node JS y Express. En el  caso de utilizar Node JS, el ORM puede ser Sequelize o Mongoose (queda a elección). El servidor  web no necesita tener una interfaz visual, todos los test se van a ejecutar por consola utilizando las  rutas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon api/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanleodomin/cruce-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivanleodomin/cruce-challenge/issues"
+  },
+  "homepage": "https://github.com/ivanleodomin/cruce-challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15",
+    "volleyball": "^1.5.1"
+  }
+}
