@@ -6,14 +6,16 @@ El desafío consta de crear un servidor web utilizando Python y Django o Node JS
 Las etapas del proyecto están creadas con el fin de evaluar el conocimiento del desarrollo, por lo que no es necesario terminar todas las etapas para entregar el desafío.
 Tareas: 
 
-1) Crear un modelo de usuario el cual tenga la siguiente información:  
+### 1) Crear un modelo de usuario el cual tenga la siguiente información: 
+ 
 email ( string, unico)  
 password (string )  
 accountName (string)  
 appKey ( String )  
 appToken ( String )  
 metodoDeFacturacion ( string – solo uno - , EJ: ‘MercadoPago’, ‘VTEX’ , ‘Prisma’, etc)  isActive ( Bool)  
-2) Crear rutas para realizar las siguientes acciones:  
+
+### 2) Crear rutas para realizar las siguientes acciones:  
 2.1) Listar todos los usuarios de la base de datos  
 2.2) Crear un usuario enviando todos los campos del modelo.  
 2.2) Listar todos los usuarios que posean método de pago enviado por query:   EJ:  
@@ -31,12 +33,15 @@ metodoDeFacturacion ( string – solo uno - , EJ: ‘MercadoPago’, ‘VTEX’ 
 accountName: “cruce”  
 appKey: ”vtexappkey-cruce-PMPMOM”  
 appToken:  
-”SRVXVMQXOVUXAEJAPWEWXBZZZQZLKKXRQKHMBHXAXGIKACEFGXOIYIRRSW XFMENEYDHQXXZHZDYRSPYXMUENWOSISPUEKSNTTDLXVNHJXGJVKAYCYASSZA IJKYXHDUWG”  
+”SRVXVMQXOVUXAEJAPWEWXBZZZQZLKKXRQKHMBHXAXGIKACEFGXOIYIRRSWXFMENEYDHQXXZHZDYRSPYXMUENWOSISPUEKSNTTDLXVNHJXGJVKAYCYASSZAIJKYXHDUWG”  
 Documentación: https://developers.vtex.com/vtex-developer-docs/reference/orders#listorders
+
 Aclaración: en el momento en que uno realiza la consulta a VTEX utilizar los siguientes datos:  
+
 environment: “vtexcommercestable” 
 f_creationDate: “creationDate:[2016-01-01T02:00:00.000Z TO  
 2021-01-01T01:59:59.999Z]” 
+
 Utilice como referencia la información que aparece a la derecha, puede utilizar Node JS o  Javascript.  
 La consulta anterior tiene una respuesta en el siguiente formato:  
 {  

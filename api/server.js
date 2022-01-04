@@ -1,26 +1,19 @@
-/* const express = require("express");
-const app = express();
-const volleyball = require("volleyball");
-const routes = require("./routes/index");
-const bodyParser = require('body-parser')
-
-app.use(volleyball());
-
-app.use("/api", routes);
-
-app.listen(3001, () => console.log("listening on port 3001")); */
-
+const mongoose = require("./database/connection");
 const express = require("express");
 const app = express();
-const volleyball = require("volleyball");
 const routes = require("./routes/index.js");
+const volleyball = require("volleyball");
 
 // middlewars
 app.use(volleyball);
 app.use(express.json());
 
+//routes
 app.use("/api", routes);
 
-app.listen(3001, () => {
-  console.log("listen on port 5432");
-});
+//connect db
+mongoose.connection.on("open", () => {
+  app.listen(3001, () => {
+    console.log("listen on port 3001");
+  });
+}); 

@@ -1,6 +1,6 @@
-const { Schemas, model } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const userSchema = new Schemas({
+const userSchema = new Schema({
   email: {
     type: String,
     unique: true,
@@ -16,16 +16,17 @@ const userSchema = new Schemas({
   },
   appKey: {
     type: String,
-    unique: true,
     required: true,
   },
   appToken: {
     type: String,
-    unique: true,
     required: true,
   },
-  metodoDeFacturacion: { type: String },
-  isActive: { type: Boolean },
+  metodoDeFacturacion: {
+    type: String,
+    required: true,
+  },
+  isActive: { type: Boolean, default: true },
 });
 
 module.exports = model("User", userSchema);
